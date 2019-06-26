@@ -34,7 +34,7 @@ def get_shared_array(name: str, shape=None):
     -------
     >>> from share_array.share_array import make_shared_array, get_shared_array
     >>> import numpy as np
-    >>> np_array = np.arange(5,3).reshape(5,3)  # create a numpy array
+    >>> np_array = np.arange(5*3).reshape(5,3)  # create a numpy array
     >>> if __name__ == '__main__':
     >>>     make_shared_array(np_array, name='my_shared_array')  # create shared memory array from numpy array
     >>> shared_np_array = get_shared_array('my_shared_array')  # get process safe shared memory array as numpy array
@@ -71,7 +71,7 @@ def make_shared_array(np_array: np.ndarray, name: str):
     -------
     >>> from share_array.share_array import make_shared_array, get_shared_array
     >>> import numpy as np
-    >>> np_array = np.arange(5,3).reshape(5,3)  # create a numpy array
+    >>> np_array = np.arange(5*3).reshape(5,3)  # create a numpy array
     >>> if __name__ == '__main__':
     >>>     make_shared_array(np_array, name='my_shared_array')  # create shared memory array from numpy array
     >>> shared_np_array = get_shared_array('my_shared_array')  # get process safe shared memory array as numpy array
