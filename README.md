@@ -7,7 +7,23 @@ between multiple processes using
 [multiprocessing.Array](https://docs.python.org/3.4/library/multiprocessing.html?highlight=process#multiprocessing.Array)
 as process safe shared memory arrays.
 
-Example usage:
+#### Usage
+```python
+# Create shared array from numpy array:
+make_shared_array(np_array, name='my_shared_array')
+
+# Access shared array as numpy array:
+array = get_shared_array('my_shared_array')
+```
+
+### Installation
+
+```bash
+pip install git+https://github.com/widmi/multiprocess-shared-numpy-arrays
+```
+
+
+### Full example:
 
 ```python
 import numpy as np
@@ -34,11 +50,5 @@ if __name__ == '__main__':
     
     print("Shared array after multiprocessing:")
     print(shared_array)  # Content of array was changed in worker processes
-```
-
-### Installation
-
-```bash
-pip install git+https://github.com/widmi/multiprocess-shared-numpy-arrays
 ```
 
